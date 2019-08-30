@@ -1281,6 +1281,7 @@ UVCCameraReader::DecodeMJPEGtoBGRA32(uint8_t *in_buf, const size_t in_size, uint
         if (m_decoder == nullptr)
         {
             LOG_ERROR("MJPEG decoder initialization failed\n", 0);
+            LOG_ERROR("tjGetErrorStr(): %s", tjGetErrorStr());
             return K4A_RESULT_FAILED;
         }
     }
